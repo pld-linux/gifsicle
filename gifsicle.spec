@@ -1,4 +1,5 @@
 Summary:	Powerful program for manipulating GIF images and animations
+Summary(pl):	Potê¿ny program do obróbki obrazków i animacji GIF
 Name:		gifsicle
 Version:	1.45
 Release:	1
@@ -23,6 +24,20 @@ The gifsicle package contains two other programs: gifview, a
 lightweight GIF viewer for X, can show animations as slideshows or in
 real time, and gifdiff compares two GIFs for identical visual
 appearance.
+
+%description -l pl
+gifsicle obrabia pliki obrazów GIF z linii poleceñ. Obs³uguje ³±czenie
+kilku GIF-ów w animacjê GIF, rozbijanie animacji na klatki sk³adowe,
+zmianê poszczególnych klatek w animacji, w³±czanie i wy³±czanie
+interlace'u, dodawanie przezroczysto¶ci, dodawanie opó¼nieñ,
+dyspozycji i pêtli do animacji, dodawanie i usuwanie komentarzy,
+optymalizacjê animacji pod k±tem rozmiaru oraz zmieny palety kolorów
+w obrazach.
+
+Pakiet gifsicle zawiera dwa dodatkowe programy: gifview (lekk±
+przegl±darkê GIF-ów dla X, potrafi±c± pokazywaæ animacje jako pokazy
+slajdów lub w czasie rzeczywistym) oraz gifdiff (porównuj±cy dwa GIF-y
+pod k±tem identycznego wygl±du).
 
 %prep
 %setup -q

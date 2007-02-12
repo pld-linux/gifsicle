@@ -1,5 +1,5 @@
 Summary:	Powerful program for manipulating GIF images and animations
-Summary(pl.UTF-8):   Potężny program do obróbki obrazków i animacji GIF
+Summary(pl.UTF-8):	Potężny program do obróbki obrazków i animacji GIF
 Name:		gifsicle
 Version:	1.46
 Release:	1

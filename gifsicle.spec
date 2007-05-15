@@ -1,14 +1,17 @@
 Summary:	Powerful program for manipulating GIF images and animations
 Summary(pl):	Potê¿ny program do obróbki obrazków i animacji GIF
 Name:		gifsicle
-Version:	1.45
+Version:	1.48
 Release:	1
 License:	GPL v2
 Group:		Applications/Graphics
 Source0:	http://www.lcdf.org/gifsicle/%{name}-%{version}.tar.gz
-# Source0-md5:	08b0055ed616c9bcdf707057ea29dbfb
+# Source0-md5:	3857d3d920180f2b9bac32c7b1a2e276
+Patch0:		%{name}-link.patch
 URL:		http://www.lcdf.org/gifsicle/
-BuildRequires:	giflib-devel
+BuildRequires:	XFree86-devel
+BuildRequires:	autoconf >= 2.59-9
+BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -41,10 +44,15 @@ pod k±tem identycznego wygl±du).
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
-%configure \
-	--enable-ungif
+%{__aclocal}
+%{__autoconf}
+%{__autoheader}
+%{__automake}
+%configure
+
 %{__make}
 
 %install
@@ -58,7 +66,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc NEWS README
+%doc ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/gifdiff
 %attr(755,root,root) %{_bindir}/gifsicle
 %attr(755,root,root) %{_bindir}/gifview

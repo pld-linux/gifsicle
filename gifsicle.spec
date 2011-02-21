@@ -11,7 +11,12 @@ Patch0:		%{name}-link.patch
 URL:		http://www.lcdf.org/gifsicle/
 BuildRequires:	autoconf >= 2.59-9
 BuildRequires:	automake
+BuildRequires:	rpm >= 4.4.9-56
+%if "%{pld_release}" == "ac"
+BuildRequires:	XFree86-devel
+%else
 BuildRequires:	xorg-lib-libX11-devel
+%endif
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -34,8 +39,8 @@ kilku GIF-ów w animację GIF, rozbijanie animacji na klatki składowe,
 zmianę poszczególnych klatek w animacji, włączanie i wyłączanie
 interlace'u, dodawanie przezroczystości, dodawanie opóźnień,
 dyspozycji i pętli do animacji, dodawanie i usuwanie komentarzy,
-optymalizację animacji pod kątem rozmiaru oraz zmieny palety kolorów
-w obrazach.
+optymalizację animacji pod kątem rozmiaru oraz zmieny palety kolorów w
+obrazach.
 
 Pakiet gifsicle zawiera dwa dodatkowe programy: gifview (lekką
 przeglądarkę GIF-ów dla X, potrafiącą pokazywać animacje jako pokazy

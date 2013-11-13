@@ -1,12 +1,12 @@
 Summary:	Powerful program for manipulating GIF images and animations
 Summary(pl.UTF-8):	Potężny program do obróbki obrazków i animacji GIF
 Name:		gifsicle
-Version:	1.71
+Version:	1.72
 Release:	1
 License:	GPL v2+
 Group:		Applications/Graphics
 Source0:	http://www.lcdf.org/gifsicle/%{name}-%{version}.tar.gz
-# Source0-md5:	0f46db0045f5de7de63a43db62d7a79e
+# Source0-md5:	6f4e50ebffca7039defd7a1aed9bcec8
 Patch0:		%{name}-link.patch
 URL:		http://www.lcdf.org/gifsicle/
 BuildRequires:	autoconf >= 2.59-9

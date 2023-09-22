@@ -12,11 +12,7 @@ URL:		http://www.lcdf.org/gifsicle/
 BuildRequires:	autoconf >= 2.59-9
 BuildRequires:	automake
 BuildRequires:	rpm >= 4.4.9-56
-%if "%{pld_release}" == "ac"
-BuildRequires:	XFree86-devel
-%else
 BuildRequires:	xorg-lib-libX11-devel
-%endif
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

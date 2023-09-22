@@ -1,11 +1,11 @@
---- gifsicle-1.46/src/Makefile.am.orig	2003-07-29 20:09:12.000000000 +0200
-+++ gifsicle-1.46/src/Makefile.am	2007-01-14 16:37:06.826618393 +0100
-@@ -6,7 +6,7 @@
+--- gifsicle-1.94/src/Makefile.am.orig	2023-09-22 20:03:18.181771375 +0200
++++ gifsicle-1.94/src/Makefile.am	2023-09-22 20:04:39.411331316 +0200
+@@ -6,7 +6,7 @@ EXTRA_PROGRAMS = gifview gifdiff
  
- LDADD = @MALLOC_O@ @LIBOBJS@
+ LDADD = @LIBOBJS@
  gifsicle_LDADD = $(LDADD) @GIFWRITE_O@
 -gifview_LDADD = $(LDADD) @X_LIBS@ @X_PRE_LIBS@ -lX11 @X_EXTRA_LIBS@
 +gifview_LDADD = $(LDADD) @X_LIBS@ -lX11 @X_EXTRA_LIBS@
  
- gifsicle_DEPENDENCIES = @GIFWRITE_O@ @MALLOC_O@ @LIBOBJS@
- gifview_DEPENDENCIES = @MALLOC_O@ @LIBOBJS@
+ gifsicle_DEPENDENCIES = @GIFWRITE_O@ @LIBOBJS@
+ gifview_DEPENDENCIES = @LIBOBJS@
